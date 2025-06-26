@@ -30,10 +30,6 @@ app.post("/blogs", async (req, res) => {
   res.status(201).json(blog);
 });
 
-app.get("/fazil", (req, res) => {
-  res.json({ message: "fazil" });
-});
-
 // GET /blogs to list articles
 app.get("/blogs", async (req, res) => {
   const blogs = await Blog.find().sort({ createdAt: -1 });
